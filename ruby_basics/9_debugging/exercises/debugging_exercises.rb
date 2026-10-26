@@ -38,9 +38,21 @@ end
 # Use p and puts in order to find what's wrong with our method
 
 def isogram?(string)
+  p string
   original_length = string.length
-  string_array = string.downcase.chars
+  p original_length
+
+  lowered_string = string.downcase
+  p lowered_string
+  
+  # split breaks the string at whitespace by default, with no spaces, it returns one item.
+  # chars makes one array item for each character
+  string_array = string.downcase.chars 
+  p string_array
+
   unique_length = string_array.uniq.length
+  p unique_length
+
   original_length == unique_length
 end
 
@@ -52,11 +64,16 @@ end
 # Once you find the error, fix it and get the test to pass
 
 def yell_greeting(string)
+  # binding.pry # inspect the input
+
   name = string
+  # binding.pry # inspect name before changing it
 
   name = name.upcase
-  greeting = "WASSAP, #{name}!"
+  # binding.pry # inspect name after downcase
 
-  puts greeting
+  greeting = "WASSAP, #{name}!"
+  # binding.pry # inspect the finished greeting
+
   greeting
 end
