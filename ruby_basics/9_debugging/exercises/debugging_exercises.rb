@@ -38,20 +38,20 @@ end
 # Use p and puts in order to find what's wrong with our method
 
 def isogram?(string)
-  p string
+  # p string
   original_length = string.length
-  p original_length
+  # p original_length
 
   lowered_string = string.downcase
-  p lowered_string
+  # p lowered_string
   
   # split breaks the string at whitespace by default, with no spaces, it returns one item.
   # chars makes one array item for each character
   string_array = string.downcase.chars 
-  p string_array
+  # p string_array
 
   unique_length = string_array.uniq.length
-  p unique_length
+  # p unique_length
 
   original_length == unique_length
 end
